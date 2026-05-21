@@ -1,4 +1,4 @@
-import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
+import SimpleLightbox from 'simplelightbox';
 
 const images = [
   {
