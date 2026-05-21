@@ -19,7 +19,6 @@ if (prevData) {
 }
 if (savedData) {
   formData = JSON.parse(savedData);
-
   emailInput.value = formData.email || '';
   messageInput.value = formData.message || '';
 }
@@ -55,4 +54,11 @@ clearCache.addEventListener('click', e => {
   localStorage.removeItem(prevKey);
   prevEmail.textContent = '';
   prevMessage.textContent = '';
+  if (emailInput.value || messageInput.value) {
+    emailInput.value = '';
+    messageInput.value = '';
+  }
+  if (savedData) {
+    localStorage.removeItem(storageKey);
+  }
 });
